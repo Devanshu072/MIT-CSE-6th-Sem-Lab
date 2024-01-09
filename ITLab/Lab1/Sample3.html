@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script type="text/javascript" src="./jquery-3.7.1.min.js">
+	</script>
+    <script type = "text/javascript" language = "javascript">
+        $(document).ready(function() {
+        var title = $("p").attr("title");
+        $("#divid").text(title);
+        $("#myimg").attr("src", "sample.jpg");
+        });
+        </script>
+</head>
+<body>
+        <div>
+        <p title = "Jai Shri Ram">Jai Shri Ram</p>
+        <p id = "myid">Jai Shri Ram</p>
+        <div id = "divid"></div>
+        <img id = "myimg" alt = "Sample image" />
+        </div>
+</body>
+</html>

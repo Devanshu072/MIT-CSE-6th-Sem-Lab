@@ -1,0 +1,146 @@
+<html>
+
+<head>
+
+    <title>Jai Shri Ram</title>
+
+    <script type="text/javascript" src="./jquery-3.7.1.min.js">
+    </script>
+    <script type="text/javascript" language="javascript">
+
+        $(document).ready(function () {
+            $("th").css("background-color", "red");
+            $("td").css("background-color", "#FBB917");
+            $(".btn-1").click(function () {
+                $("div").animate({ left: '0px'});
+            });
+        });
+
+        $(document).ready(function () {
+            $(".btn-2").click(function () {
+                $("div").animate({ right: '1000px'});
+            });
+
+        });
+
+    </script>
+
+    <style type="text/css">
+        table {
+
+            font-family: arial, sans-serif;
+
+            border-collapse: collapse;
+
+        }
+
+        td,
+        th {
+
+            border: 1px solid #dddddd;
+
+            text-align: left;
+
+            padding: 10px;
+
+        }
+
+        .main-container {
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+        .sub-container {
+
+            position: relative;
+
+            left: 250px;
+
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="sub-container">
+
+            <table>
+
+                <tr>
+
+                    <th>Affiliation</th>
+
+                    <th>Deity</th>
+
+                    <th>Governing body</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Hinduism</td>
+
+                    <td>Ram Lalla</td>
+
+                    <td>Shri Ram Janmabhoomi Teerth Kshetra</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>Status</th>
+
+                    <th>Location</th>
+
+                    <th>State</th>
+                </tr>
+
+                <tr>
+
+                    <td>Under construction</td>
+
+                    <td>Ram Janmabhoomi, Ayodhya</td>
+
+                    <td>Uttar Pradesh, India</td>
+                </tr>
+
+            </table>
+
+            <br>
+
+            <div class="image">
+
+                <img src="sample.jpg" alt="real n" width="350" height="300">
+
+            </div>
+
+            <div class="image">
+
+                <img src="ayodhya.jpg" alt="real n" width="350" height="300">
+
+            </div>
+
+        </div>
+
+        <div class="btn-1">
+
+            <button type="button">Jai Shri Ram-left</button>
+        </div>
+
+        <div class="btn-2">
+
+            <button type="button">Jai Shri Ram-rigth</button>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
