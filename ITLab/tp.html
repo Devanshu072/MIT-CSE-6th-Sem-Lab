@@ -1,0 +1,108 @@
+<!<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FORM</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form>
+            <label for="username">username:</label>
+            <input type="text" placeholder="Enter the username" id="username" required >
+
+            <br>
+
+            <label for="password">password:</label>
+            <input type="password" placeholder="Enter the password" id="password" required >
+
+            <br>
+
+            <label for="email"> Email: </label>
+            <input type="email" placeholder="Enter the email" id="email">
+
+            <br>
+
+            <label for="phone">Phone Number</label>
+            <input type="phone" placeholder="Phone Number" id="phone">
+
+            <br>
+
+            <label for="bday">Birthdate</label>
+            <input type="date" placeholder="dd-mm-yyyy" id="bday">
+
+            <br>
+
+            <label for="class"> Class </label>
+            <input type="number" placeholder="Enter std." id="class" min="0" max="12" value="1">
+
+            <br>
+
+            <label for="title">Title:</label>
+            <br>
+            <label for="Mr.">Mr.</label>
+            <input type="radio" id="Mr." value="Mr." name="title">
+            <br>
+            <label for="Ms.">Ms.</label>
+            <input type="radio" id="Ms." value="Ms." name="title">
+            <br>
+            <label for="PhD.">PhD.</label>
+            <input type="radio" id="PhD." value="PhD." name="title">
+            <br>
+
+            <label for="payment">payment</label>
+            <select id="payment">
+                <option value="Visa"> VISA</option>
+                <option value="MasterCard">MASTERCARD</option>
+                <option value="GiftCard">GiftCard</option>
+            </select>
+
+            <br>
+
+            <label for="termsandconditions">Terms And Conditions</label>
+            <input type="checkbox" id="termsandconditions" required>
+
+            <br>
+
+            <label for="Comment">Comment</label>
+            <textarea id="Comment" rows="3" cols="100">Enter comments</textarea>
+
+            <br>
+
+            <label for="files">Drop the file here</label>
+            <input type="file" id="files">
+
+            <br>
+
+            <table border="10">
+                <tr align="centre">
+                    <th width="100" style="background-color: aqua;">Item</th>
+                    <th width="150" style="background-color: blanchedalmond;">Quantity</th>
+                </tr>
+                <tr align="centre">
+                    <td>50</td>
+                    <td>Banans</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Apple</td>
+                </tr>
+                <tr>
+                    <td>60</td>
+                    <td>Kiwi</td>
+                </tr>
+
+            </table>
+            
+            <button id="btn1"> Done</button>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </body>
+</html>
