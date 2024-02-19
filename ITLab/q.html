@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown and Animation</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            margin-top: 40px;
+        }
+
+        .moving-image {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Order Form</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="item1">Item 1:</label>
+                <select id="item1" name="item1" class="item">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <label for="item1">Item 2:</label>
+                <select id="item1" name="item1" class="item">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <label for="item1">Item 3:</label>
+                <select id="item1" name="item1" class="item">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <!-- Repeat for other items -->
+
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+
+        <div class="table-container">
+            <h2>Order Summary</h2>
+            <table id="orderSummary">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated dynamically using jQuery -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="moving-image"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#orderForm').submit(function (event) {
+                event.preventDefault();
+
+                var formData = $(this).serializeArray();
+                var tableBody = $('#orderSummary tbody');
+                tableBody.empty();
+
+                formData.forEach(function (item) {
+                    if (item.value !== "0") {
+                        tableBody.append('<tr><td>' + item.name + '</td><td>' + item.value + '</td></tr>');
+                    }
+                });
+
+                // Animation
+                $('.moving-image').animate({ left: '100%' }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
